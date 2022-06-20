@@ -11,6 +11,12 @@ export default function Home() {
           {session ? (
             <>
               <div>
+                {session.user.image && (
+                  <span>
+                    <img src={session.user.image} alt={session.user.name} />
+                  </span>
+                )}
+
                 <h1 className="text-2xl font-bold underline">
                   {" "}
                   Signed in as {session.user.email}
